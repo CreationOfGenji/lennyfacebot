@@ -1,3 +1,4 @@
+require('http').createServer().listen(3000)
 const Discord = require("discord.js");
 const client = new Discord.Client();
  
