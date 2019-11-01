@@ -17,9 +17,11 @@ bot.on("message", (message) => {
     fs.exists(`${folder}/${message.author.id}.json`, exists => {
       if(exists){
         let dir = `${folder}/${message.author.id}.json`
+        let data = fs.readFileSync(dir)
+        let userdata = JSON.parse(data)
         let pembed = new Discord.RichEmbed()
         pembed.setTitle("Your lenny-pet!")
-        pembed.addField(`Your Lenny: ${dir.lenny}`)
+        pembed.addField(`Your Lenny: ${userdata.lenny}`)
         pembed.addField(`Your Lenny's Hunger: 500`)
         message.channel.send(pembed);
       }
