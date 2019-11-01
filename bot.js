@@ -12,7 +12,7 @@ bot.on("message", (message) => {
     message.channel.send(`BOO! Did i scare you? The bot's current ping is ${bot.ping}ms`);
   }
 
-  if(message.content.startsWith(`${prefix}lennytime`)){
+  if(message.content.startsWith(`${prefix}lenny`)){
     let folder = "./trainer"
     message.channel.send("Welcome to ze lenny bot! what lenny do you want to pick!\n1. ( ͡° ͜ʖ ͡°)\n2. ( ° ͜ʖ °)\ntype the number of lenny you want! you have 15 seconds to reply! (aka 1, 2 ect)")
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 15000 });
