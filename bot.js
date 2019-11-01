@@ -12,11 +12,15 @@ bot.on("message", (message) => {
     message.channel.send(`BOO! Did i scare you? The bot's current ping is ${bot.ping}ms`);
   }
 
-  if(message.content.startsWith(`${prefix}lenny`)){
+  if(message.content.startsWith(`${prefix}lennytime`)){
     let folder = "./trainer"
     fs.exists(`${folder}/${message.author.id}.json`, exists => {
       if(exists){
-        message.channel.send("hello there!")
+        let dir = `${folder}/${message.author.id}.json`
+        let pembed = new Discord.RichEmbed()
+        pembed.title("Your lenny-pet!")
+        pembed.addField(`Your Lenny: ${dir.lenny}`)
+        pembed.addField(`Your Lenny's Hunger: 500`)
       }
       else {
         message.channel.send("Welcome to ze lenny bot! what lenny do you want to pick!\n1. ( ͡° ͜ʖ ͡°)\n2. ( ° ͜ʖ °)\ntype the number of lenny you want! you have 15 seconds to reply! (aka 1, 2 ect)")
@@ -50,4 +54,4 @@ bot.on("message", (message) => {
   }
 });
  
-bot.login(process.env.token);
+bot.login("NjM5NTY5OTQ1MjE0MzIwNjcw.Xbw7KQ.fuCP57RFUhwcTRxcr4RV_xUFDzM");
