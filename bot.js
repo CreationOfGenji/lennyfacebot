@@ -12,7 +12,7 @@ bot.on("message", (message) => {
     message.channel.send(`BOO! Did i scare you? The bot's current ping is ${bot.ping}ms`);
   }
 
-  if(message.content.startsWith(`${prefix}lennytime`)){
+  if(message.content.startsWith(`${prefix}lenny`)){
     let folder = "./trainer"
     fs.exists(`${folder}/${message.author.id}.json`, exists => {
       if(exists){
