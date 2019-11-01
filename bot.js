@@ -21,6 +21,7 @@ bot.on("message", (message) => {
         pembed.title("Your lenny-pet!")
         pembed.addField(`Your Lenny: ${dir.lenny}`)
         pembed.addField(`Your Lenny's Hunger: 500`)
+        message.channel.send(pembed);
       }
       else {
         message.channel.send("Welcome to ze lenny bot! what lenny do you want to pick!\n1. ( ͡° ͜ʖ ͡°)\n2. ( ° ͜ʖ °)\ntype the number of lenny you want! you have 15 seconds to reply! (aka 1, 2 ect)")
